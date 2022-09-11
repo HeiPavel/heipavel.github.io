@@ -1,15 +1,22 @@
 const imagesArray = document.getElementsByClassName('mobileImage');
 const parent = document.getElementsByClassName('parent');
+let clickChecker = false;
 /*  Checking if used buttons to show box in mobile vertion and switch display to 'block' if resize higer than 540px  */
 const queryCheck = (screenWidth) => {
   if (screenWidth >= 540) {
+    if (clickChecker) {
     Array.prototype.forEach.call(parent, element => {
       element.closest('.box').style.display = 'block';
     });
+    clickChecker = false;
+    }
   } else {
+    if (!clickChecker) {
     Array.prototype.forEach.call(parent, element => {
       element.closest('.box').style.display = 'none';
     });
+    clickChecker = true;
+    }
   }
 }
 /*  Swaping images by changing src atribute if screen width lower than 912 px and back desktop images if resize back  */
@@ -47,5 +54,6 @@ const sizeListener = () => {
 $(document).ready(() => {
   $('.button').on('click', event => {
     $(event.currentTarget).next('.box').slideToggle();
+    clickChecker = true;
   });
 });
