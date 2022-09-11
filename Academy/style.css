@@ -1,0 +1,610 @@
+:root {
+    font-size: 18px;
+    --main-bc: #ffffff;
+    --second-bc: #eaebec;
+    --font-color: #1E1A1A;
+    --second-fc: #7A7575;
+    --link-color: #4c91e2;
+}
+/*  General styles  */
+body {
+    margin: 0;
+    font-family: 'Libre Baskerville', serif;
+    color: var(--font-color);
+}
+
+img, video {
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+
+p, h1, h2, h3, a {
+    margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+}
+/*  Header and some similar Footer styles  */
+header {
+    width: 100%;
+    height: 64px;
+    background-color: var(--main-bc);
+}
+
+header .content, footer .content {
+    display: flex;
+    height: 64px;
+    padding: 0 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .mobile {
+    display: none;
+}
+
+header .logo {
+    display: flex;
+    height: 32px;
+    align-items: center;
+}
+
+.logo .media {
+    width: 32px;
+}
+
+.logo h1 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--second-fc);
+}
+
+.logo h1 span {
+    font-weight: 700;
+    color: var(--font-color);
+}
+
+header nav ul, footer nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: var(--font-color);
+}
+
+header nav ul li, footer nav ul li {
+    font-size: 1.2rem;
+    padding: 0 8px;
+}
+
+header .desktop nav ul li:nth-last-child(1) {
+    padding-right: 0;
+}
+/*  Main styles  */
+main {
+    margin: 0;
+    width: 100%;
+}
+/*  First Section styles  */
+.start {
+    display: flex;
+    background-color: var(--second-bc);
+}
+
+.start .container {
+    margin: 0;
+    width: 60%;
+    padding: 32px 48px 32px 24px;
+}
+
+.start .container img {
+    width: 100%;
+    height: auto;
+} 
+
+.start .text {
+    align-self: center;
+}
+
+.start .text h1, .start .text h3 {
+  margin: 40px 0;  
+  text-align: left;
+}
+
+.start .text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.start .text h3 {
+  font-size: 1.5rem;
+}
+
+.start .text a {
+  display: block;
+  text-align: center;  
+  padding: 16px 0;
+  color: var(--main-bc);
+  background-color: var(--font-color);
+  font-size: 1.2rem;
+}
+/*  Second Section (Flex) styles  */
+.flex-media {
+    display: flex;
+}
+
+.flex-media a {
+    color: var(--link-color);
+    font-weight: 700;
+}
+
+.flex-media .container {
+    width: 60%;
+    padding: 32px 24px;
+    border-right: 1px solid var(--second-bc);
+}
+
+.flex-media .container .text h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    padding: 32px 0 24px 0;
+}
+
+.flex-media .container .text p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.flex-media .container .text aside {
+    margin-top: 40px;
+}
+
+.flex-media .container .text aside p {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: normal;
+}
+
+.flex-media .column {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-top: 16px;
+}
+
+.flex-media .column .box {
+    display: flex;
+    padding: 16px;
+}
+
+.flex-media .column .box .media {
+    width: 35%;
+}
+
+.flex-media .column .box .text {
+    align-self: center;
+    padding: 0 20px;
+    width: 65%;
+}
+
+.flex-media .column .box .text h2 {
+    font-size: 2rem;
+}
+
+.flex-media .column .box .text p {
+    font-size: 1.2rem;
+    margin: 8px 0;
+}
+
+.flex-media .column .box .text a {
+    font-size: 1.2rem;
+}
+/*  Third Section (Grid) "Start learning" styles  */
+section .section-header {
+    text-align: center;
+    padding: 32px 0;
+    font-size: 3rem;
+}
+
+section .gr-container {
+    padding: 0 108px 32px 108px;
+    background-color: var(--second-bc);
+    width: 100%;
+}
+
+.grid-media {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    gap: 32px;
+}
+
+.grid-media .box-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-media .box-container .mobile {
+    display: none;
+    padding: 16px;
+    background-color: var(--second-bc);
+    font-size: 1.2rem;
+}
+
+.grid-media .box {
+    background-color: var(--main-bc);
+    flex-grow: 1;
+}
+
+.grid-media .box .text {
+    padding: 24px 32px;
+}
+
+.grid-media .box .text h3 {
+  padding: 0 0 24px 0;  
+  font-size: 1.7rem;
+}
+
+.grid-media .box .text p {
+    padding: 8px 100px 0 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+/*  Fourth Section (Flex) "Thesis" styles  */
+#thesis .flex-media .container .text h1 {
+    font-size: 2.2rem;
+}
+
+#thesis .flex-media .container {
+    border-right: none;
+}
+/*  Footer styles  */
+footer {
+    height: 100px;
+    border-top: 1px solid var(--second-fc);
+}
+
+footer .container p, footer nav ul li {
+    font-size: 0.9rem;
+} 
+/*  Media query styles  */
+@media only screen and (max-width: 1600px) {
+.grid-media {
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+}
+}
+
+@media only screen and (max-width: 1280px) {
+.start .container {
+    width: 50%;
+    padding: 16px 24px 16px 12px;
+}
+
+.flex-media .column .box {
+    padding: 16px 10px;
+}
+
+.flex-media .column .box .text {
+    padding: 0 0 0 10px;
+}
+
+.flex-media .container .text h1 {
+    font-size: 2.4rem;
+}
+
+.flex-media .container .text p {
+    font-size: 1rem;
+}
+
+.flex-media .column .box .text h2 {
+    font-size: 1.4rem;
+}
+
+.flex-media .column .box .text p {
+    font-size: 1rem;
+}
+
+.flex-media .column .box .text a {
+    font-size: 1rem;
+}
+
+section .gr-container {
+    padding: 0 54px 32px 54px;
+}
+
+section .section-header {
+    font-size: 2.5rem;
+}
+
+.grid-media .box .text {
+    padding: 16px 12px;
+}
+
+.grid-media .box .text h3 { 
+    font-size: 1.5rem;
+}
+  
+.grid-media .box .text p {
+    padding-right: 0;
+    font-size: 1rem;
+}
+}
+
+@media only screen and (max-width: 912px) {
+.logo h1 {
+    font-size: 1.1rem;
+}
+
+header nav ul li {
+    font-size: 0.9rem;
+}
+
+.start .text h1, .start .text h3 {
+    margin: 20px 0;  
+  }
+
+.start .text h1 {
+    font-size: 1.8rem;
+}
+      
+.start .text h3 {
+    font-size: 1.2rem;
+}
+
+.start .text a {
+    padding: 12px 0;
+}
+
+.flex-media .container .text h1 {
+    font-size: 2rem;
+}
+
+.flex-media .column .box {
+    flex-direction: column;
+}
+
+.flex-media .column .box .media {
+    width: 100%;
+}
+
+.flex-media .column .box .text {
+    padding: 16px 0 0 0;
+    width: 100%;
+}
+
+.flex-media .column .box .text h2 {
+    font-size: 1.4rem;
+}
+
+section .section-header {
+    font-size: 2rem;
+}
+
+section .gr-container {
+    padding: 0 20px 32px 20px;
+}
+
+.grid-media .box .text {
+    padding: 16px 12px;
+}
+
+.grid-media .box .text h3 { 
+    font-size: 1.3rem;
+}
+  
+.grid-media .box .text p {
+    font-size: 0.9rem;
+}
+}
+
+@media only screen and (max-width: 720px) {
+header .hide {
+    display: none;
+}
+
+.start .text h1 {
+    font-size: 1.5rem;
+}
+      
+.start .text h3 {
+    font-size: 1rem;
+}
+
+.start .text a {
+    font-size: 1rem;
+  }
+
+.flex-media .container .text h1, #thesis .flex-media .container .text h1 {
+    font-size: 1.5rem;
+}
+
+.flex-media .column .box .text h2 {
+    font-size: 1.2rem;
+}
+
+footer nav ul {
+    flex-direction: column;
+}
+
+footer .container {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+footer .container p, footer nav ul li {
+    margin: 0;
+    font-size: 0.8rem;
+} 
+
+footer nav ul li {
+    padding: 4px 8px;
+}
+}
+
+@media only screen and (max-width: 540px) {
+header .desktop {
+    display: none;
+}
+
+header .mobile {
+    display: flex;
+}
+
+header nav {
+    width: 100%;
+}
+
+header .mobile a {
+    width: 36px;
+}
+
+header .mobile nav ul {
+    justify-content: space-between;
+}
+
+header .mobile nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.start {
+    flex-direction: column;
+}
+
+.start .container {
+    width: 100%;
+    padding: 0;
+}
+
+.start .text {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    align-self: stretch;
+}
+
+.start .text h1 {
+    margin: 32px 0;
+}
+  
+.start .text h3 {
+    margin: 0 0 24px 0;
+}
+
+.start .text a {
+    margin-bottom: 32px;
+    font-size: 1rem;
+}
+
+.flex-media .desktop {
+    display: none;
+}
+
+.flex-media .column {
+    padding: 0;
+    width: 100%;
+}
+
+.flex-media .column .box {
+    padding: 32px 10px;
+}
+
+.flex-media .column .box:first-child {
+    padding-top: 16px;
+}
+
+.flex-media .column .box .text {
+    padding: 16px 16px 0 16px;
+}
+
+section .section-header {
+    font-size: 2rem;
+}
+
+
+section .gr-container {
+    padding: 0 16px 32px 16px;
+    background-color: var(--main-bc);
+}
+
+.grid-media {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.grid-media .box-container .mobile {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.hide {
+    display: none;
+}
+
+#thesis .flex-media .container {
+    padding: 0;
+}
+
+#thesis .flex-media .container .desktop {
+    display: none;
+}
+
+#thesis .flex-media .container {
+    width: 100%;
+}
+
+footer .content {
+    height: 100%;
+    justify-content: center;
+}
+
+footer .container {
+    margin: 0;
+    align-self: center;
+}
+
+footer nav {
+    display: none;
+}
+}
+
+@media only screen and (max-width: 360px) {
+.start .text h1 {
+  font-size: 1.6rem;
+}
+      
+.start .text h3 {
+  font-size: 1rem;
+}
+
+.flex-media .column .box .text p {
+    font-size: 0.9rem;
+}
+
+.flex-media .column .box .text {
+    padding-right: 0;
+}
+
+footer .container p {
+    font-size: 0.7rem;
+}
+
+footer .content {
+    padding: 0 8px;
+} 
+}
