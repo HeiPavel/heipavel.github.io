@@ -5,16 +5,16 @@ let clickChecker = false;
 const queryCheck = (screenWidth) => {
   if (screenWidth >= 540) {
     if (clickChecker) {
-    Array.prototype.forEach.call(parent, element => {
-      element.closest('.box').style.display = 'block';
-    });
+      Array.prototype.forEach.call(parent, element => {
+        element.closest('.box').style.display = 'block';
+      });
     clickChecker = false;
     }
   } else {
     if (!clickChecker) {
-    Array.prototype.forEach.call(parent, element => {
-      element.closest('.box').style.display = 'none';
-    });
+      Array.prototype.forEach.call(parent, element => {
+        element.closest('.box').style.display = 'none';
+      });
     clickChecker = true;
     }
   }
